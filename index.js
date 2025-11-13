@@ -12,7 +12,19 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/", async (req, res) => {
+    res.sendFile(path.join(__dirname,'Views', 'entrance.html'));
+});
+
+app.get("/form1", async (req, res) => {
     res.sendFile(path.join(__dirname,'Views', 'form1.html'));
+});
+
+app.get("/form2", async (req, res) => {
+    res.sendFile(path.join(__dirname,'Views', 'form2.html'));
+});
+
+app.get("/confirmation", async (req, res) => {
+    res.sendFile(path.join(__dirname,'Views', 'confirmation.html'));
 });
 
 app.listen(port, (req, res) => {
