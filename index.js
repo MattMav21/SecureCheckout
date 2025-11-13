@@ -9,22 +9,22 @@ const __dirname = dirname(__filename);
 const app = express();
 const port = 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 app.get("/", async (req, res) => {
-    res.sendFile(path.join(__dirname,'Views', 'entrance.html'));
+    res.sendFile(path.join(__dirname,'Public', 'entrance.html'));
 });
 
 app.get("/form1", async (req, res) => {
-    res.sendFile(path.join(__dirname,'Views', 'form1.html'));
+    res.sendFile(path.join(__dirname,'Public', 'form1.html'));
 });
 
 app.get("/form2", async (req, res) => {
-    res.sendFile(path.join(__dirname,'Views', 'form2.html'));
+    res.sendFile(path.join(__dirname,'Public', 'form2.html'));
 });
 
 app.get("/confirmation", async (req, res) => {
-    res.sendFile(path.join(__dirname,'Views', 'confirmation.html'));
+    res.sendFile(path.join(__dirname,'Public', 'confirmation.html'));
 });
 
 app.listen(port, (req, res) => {
