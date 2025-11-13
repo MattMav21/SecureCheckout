@@ -9,6 +9,8 @@ const __dirname = dirname(__filename);
 const app = express();
 const port = 3000;
 
+app.use(express.urlencoded({ extended: true }));
+
 app.use(express.static('public'));
 
 app.get("/", async (req, res) => {
@@ -21,6 +23,33 @@ app.get("/form1", async (req, res) => {
 
 app.get("/form2", async (req, res) => {
     res.sendFile(path.join(__dirname,'Public', 'form2.html'));
+});
+
+
+app.post("/submit-form1", async (req, res) => {
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log("HEHEHEHEHE")
+    console.log(req.body)
+    res.send(req.params)
+});
+
+app.post("/form2", async (req, res) => {
+    res.send(req.body)
 });
 
 app.get("/confirmation", async (req, res) => {
