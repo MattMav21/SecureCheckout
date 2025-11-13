@@ -45,11 +45,22 @@ app.post("/submit-form1", async (req, res) => {
     console.log("HEHEHEHEHE")
     console.log("HEHEHEHEHE")
     console.log(req.body)
-    res.send(req.params)
+    const name = req.body.cname;
+    const number = req.body.cnumber;
+    const exDate = req.body.exDate;
+    const cvv = req.body.cvv;
+
+    console.log(name, number, exDate, cvv);
+    res.send(req.body);
 });
 
-app.post("/form2", async (req, res) => {
-    res.send(req.body)
+app.post('/submit-form2', (req, res) => {
+    console.log(req.body)
+    const name = req.body.cname;
+    const number = req.body.cnumber;
+    const exDate = req.body.exDate;
+    const cvv = req.body.cvv;
+    res.send(req.body);
 });
 
 app.get("/confirmation", async (req, res) => {
