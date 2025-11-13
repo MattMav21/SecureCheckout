@@ -28,7 +28,8 @@ app.get("/form2", (req, res) => {
 });
 app.post("/submit-form2", (req, res) => {
   console.log(req.body);
-  res.send(req.body);
+//   res.send(req.body);
+  res.redirect("/confirmation");
 });
 
 // For Form 1, you can keep the same route or serve a separate page
@@ -37,7 +38,17 @@ httpApp.get("/form1", (req, res) => {
 });
 httpApp.post("/submit-form1", (req, res) => {
   console.log(req.body);
-  res.send(req.body);
+//   res.send(req.body);
+  res.redirect("https://localhost:3001/confirmation");
+});
+
+// Confirmation Page
+app.get("/confirmation", (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'confirmation.html'));
+});
+
+httpApp.get("/confirmation", (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'confirmation.html'));
 });
 
 // --- Start servers ---
