@@ -7,10 +7,12 @@
     <title>Confirmation</title>
 </head>
 
-<body>
-<h1>You're all set.</h1>
-<p>The payment of $<span id="amount"></span> went through successfully.</p>
-<p>Thank you for your purchase!</p>
+<body id="confirmation-body">
+<div id="confirmation-text">
+    <h1>You're all set!</h1>
+    <p>The payment of $<span id="amount"></span> went through successfully.</p>
+    <p>Thank you for your purchase!</p>
+</div>
 
 <script>
   // Parse URL for 'total' parameter
