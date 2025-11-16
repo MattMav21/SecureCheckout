@@ -8,37 +8,65 @@
 </head>
 
 <body id="form1">
-    <h1 class="text">Form 1</h1>
-    <a href="/entrance.html">Back</a>
-    
+    <!-- <h1 class="text">Form 1</h1> -->
     <form method="POST" action="/submit-form1">
-        <div>
-            <label for="cname">Cardholder Name</label>
-            <input type="text" id="cname" name="cname">
-            <label for="cnumber">Card Number</label>
-            <input type="text" id="cnumber" name="cnumber">
-            <label for="exDate">Expiration Date</label>
-            <input type="text" id="exDate" name="exDate" inputmode="numeric" pattern="\d{2}/\d{2}" placeholder="MM/YY" maxlength="5"/>
-            <label for="cvv">CVV</label>
-            <input type="text" id="cvv" name="cvv" maxlength="3">
+        <div id="top-half">
+            <div id="section-1" class="section">
+                <div>
+                    <label for="cname">Cardholder Name</label>
+                    <input type="text" id="cname" name="cname">
+                </div>
+                <div>
+                    <label for="cnumber">Card Number</label>
+                    <input type="text" id="cnumber" name="cnumber">
+                </div>
+                <div id="card-extra">
+                    <div>
+                        <label for="exDate">Expiration Date</label>
+                        <input type="text" id="exDate" name="exDate" inputmode="numeric" pattern="\d{2}/\d{2}" placeholder="MM/YY" maxlength="5"/>
+                    </div>
+                    <div>
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" maxlength="3">
+                    </div>
+                </div>
+            </div>
+            <div id="section-2" class="section">
+                <div>
+                    <label for="street">Street Address</label>
+                    <input type="text" id="street" name="street"/>
+                </div>
+                <div id="address-extra">
+                    <div>
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city"/>
+                    </div>
+                    <div>
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state"/>
+                    </div>
+                    <div>
+                        <label for="zip">Zip/Postal Code</label>
+                        <input type="text" id="zip" name="zip"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <label for="street">Street Address</label>
-            <input type="text" id="street" name="street"/>
-            <label for="city">City</label>
-            <input type="text" id="city" name="city"/>
-            <label for="state">State</label>
-            <input type="text" id="state" name="state"/>
-            <label for="zip">Zip/Postal Code</label>
-            <input type="text" id="zip" name="zip"/>
-        </div>
-        <div>
+        <div id="section-3" class="section">
             <h2>Contact Information</h2>
-            <label for="email">Email Address</label>
-            <input type="text" id="email" name="email"/>
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" name="phone"/>
-            <input type="submit" value="Submit">
+            <div id="contact-inputs">
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email"/>
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone"/>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Confirm Payment" id="submit-btn">
+            </div>
         </div>
     </form>
 </body>
