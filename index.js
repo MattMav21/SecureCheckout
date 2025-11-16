@@ -29,7 +29,8 @@ app.get("/form2", (req, res) => {
 app.post("/submit-form2", (req, res) => {
   console.log(req.body);
 //   res.send(req.body);
-  res.redirect("/confirmation");
+  const totalAmount = req.body.total || '';
+  res.redirect(`/confirmation?total=${encodeURIComponent(totalAmount)}`);
 });
 
 // For Form 1, you can keep the same route or serve a separate page
@@ -39,7 +40,8 @@ httpApp.get("/form1", (req, res) => {
 httpApp.post("/submit-form1", (req, res) => {
   console.log(req.body);
 //   res.send(req.body);
-  res.redirect("https://localhost:3001/confirmation");
+  const totalAmount = req.body.total || '';
+  res.redirect(`https://localhost:3001/confirmation?total=${encodeURIComponent(totalAmount)}`);
 });
 
 // Confirmation Page

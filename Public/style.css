@@ -116,7 +116,7 @@ div > div > div > label {
 }
 
 #total-div > h2 {
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 #total-input {

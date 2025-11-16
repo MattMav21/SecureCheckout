@@ -7,8 +7,17 @@
     <title>Confirmation</title>
 </head>
 
-<body id="confirmation">
-    <h1 class="text">Confirmation</h1>
+<body>
+<h1>Payment Confirmation</h1>
+<p>Your total amount is: $<span id="amount"></span></p>
+
+<script>
+  // Parse URL for 'total' parameter
+  const params = new URLSearchParams(window.location.search);
+  const total = params.get('total') || '0.00';
+  document.getElementById('amount').textContent = total;
+</script>
 </body>
+</html>
 
 </html>
