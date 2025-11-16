@@ -21,16 +21,16 @@ form {
     padding: 20px;
 }
 
+#billing-heading {
+    padding: 0 20px;
+}
+
 .section {
     /* padding: 20px 0; */
 }
 
 #section-1 {
     padding: 0 20px;
-}
-
-#billing-heading {
-    margin-left: 40px;
 }
 
 #top-half {
@@ -40,7 +40,6 @@ form {
 
 #top-half > * {
     width: 100%;
-    margin: 0 25px;
 }
 
 #top-half > input {
@@ -76,11 +75,11 @@ div > div > div > * {
 }
 
 div > div > div > label {
-    padding: 30px 0 5px;
+    padding: 5px 0 5px;
 }
 
 #section-3 {
-    padding: 40px 20px 10px;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
     width: 100%;
