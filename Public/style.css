@@ -68,10 +68,6 @@ form {
     margin-left: 10px;
 }
 
-/* #card-extra > * {
-    padding-right: 70px;
-} */
-
 #address-extra {
     display: flex;
     justify-content: space-between;
