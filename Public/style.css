@@ -1,11 +1,3 @@
-/* #form1 {
-    background-color: red;
-}
-
-#form2 {
-    background-color: green;
-} */
-
 input {
     width: 100%;
 }
@@ -128,4 +120,3 @@ div > div > div > label {
     background-color: white;
     box-shadow: 0 0 40px rgb(152, 239, 168);;
 }
-
